@@ -1,0 +1,14 @@
+{
+  "name": "drupal/custom_validation",
+  "type": "drupal-module",
+  "description": "Just trying out some custom validation of entities",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/custom_validation",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/custom_validation",
+    "source": "http://cgit.drupalcode.org/custom_validation"
+  },
+  "require": { }
+}

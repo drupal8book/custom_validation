@@ -1,0 +1,5 @@
+name: Custom validation
+type: module
+description: Just trying out some custom validation of entities
+core: 8.x
+package: Examples

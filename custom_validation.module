@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_validation.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_validation_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_validation module.
+    case 'help.page.custom_validation':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Just trying out some custom validation of entities') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function custom_validation_entity_type_alter(array &$entity_types) {
+  $node = $entity_types['node'];
+  $node->addConstraint('PreventAnon', []);
+}
