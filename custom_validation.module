@@ -31,3 +31,13 @@ function custom_validation_entity_type_alter(array &$entity_types) {
   $node = $entity_types['node'];
   $node->addConstraint('PreventAnon', []);
 }
+
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function custom_validation_entity_bundle_field_info_alter(&$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() == 'node' && $bundle == 'article') {
+    $fields['field_shirt_size']->addConstraint('ShirtSize', ['sizes' => ['M','L','XL']]);
+  }
+}
