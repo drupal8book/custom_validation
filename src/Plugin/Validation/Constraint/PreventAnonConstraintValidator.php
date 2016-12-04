@@ -18,7 +18,9 @@ class PreventAnonConstraintValidator extends ConstraintValidator {
       return;
     }
     if (!$entity->getOwnerId()) {
-      $this->context->addViolation($constraint->message);
+      $this->context->buildViolation($constraint->message)
+        ->atPath('uid')
+        ->addViolation();
     }
   }
 }
