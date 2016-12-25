@@ -6,7 +6,7 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Exception\MissingOptionsException;
 
 /**
- * Prevent anon nodes from being created.
+ * Shirt sizes.
  *
  * @Constraint(
  *   id = "ShirtSize",
